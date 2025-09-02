@@ -248,7 +248,12 @@ bind -n S-Right next-window
 
 # QOL stuff
 set -g allow-rename off
-set -s copy-command 'xsel -i'
+
+# Enable clipboard
+set -g set-clipboard on
+set -g @override_copy_command 'xclip -i -sel p -f | xclip -i -sel c'
+set -g @yank_selection 'clipboard'
+set-option -sa terminal-features ',*:clipboard'
 
 # Search mode VT (default is emac)
 set-window-option -g mode-keys vi
