@@ -248,6 +248,7 @@ bind -n S-Right next-window
 
 # QOL stuff
 set -g allow-rename off
+set -s copy-command 'xsel -i'
 
 # Search mode VT (default is emac)
 set-window-option -g mode-keys vi
